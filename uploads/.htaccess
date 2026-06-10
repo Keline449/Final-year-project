@@ -1,0 +1,4 @@
+# Allow download of uploaded evaluation forms
+<IfModule mod_authz_core.c>
+    Require all granted
+</IfModule>
