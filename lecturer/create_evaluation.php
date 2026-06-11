@@ -146,7 +146,7 @@ require_once __DIR__ . '/../includes/header.php';
         <section class="panel">
             <h2>Manage Questions — <?= htmlspecialchars($currentEval['title']) ?></h2>
             <?php if ($currentEval['form_file']): ?>
-                <p>Form: <a href="/evaluationmanagement/uploads/<?= htmlspecialchars($currentEval['form_file']) ?>" target="_blank">Download</a></p>
+                <p>Form: <a href="/uploads/<?= htmlspecialchars($currentEval['form_file']) ?>" target="_blank">Download</a></p>
             <?php endif; ?>
 
             <form method="post" class="ems-form">

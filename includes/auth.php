@@ -6,18 +6,18 @@ require_once __DIR__ . '/../config/database.php';
 function requireRole(string ...$roles): void
 {
     if (empty($_SESSION['user_id']) || empty($_SESSION['role'])) {
-        header('Location: /evaluationmanagement/login.php');
+        header('Location: /login.php');
         exit;
     }
     if (!in_array($_SESSION['role'], $roles, true)) {
-        header('Location: /evaluationmanagement/index.php');
+        header('Location: /index.php');
         exit;
     }
 }
 
 function redirectByRole(string $role): void
 {
-    $base = '/evaluationmanagement';
+    $base = '';
     switch ($role) {
         case 'student':
             header("Location: {$base}/student/dashboard.php");

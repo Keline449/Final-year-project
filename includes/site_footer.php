@@ -13,9 +13,9 @@
         <div class="footer-col">
             <h3>Quick Links</h3>
             <ul class="footer-links">
-                <li><a href="/evaluationmanagement/index.php">Home</a></li>
-                <li><a href="/evaluationmanagement/register.php">Registration</a></li>
-                <li><a href="/evaluationmanagement/login.php">Login</a></li>
+                <li><a href="/index.php">Home</a></li>
+                <li><a href="/register.php">Registration</a></li>
+                <li><a href="/login.php">Login</a></li>
             </ul>
         </div>
     </div>

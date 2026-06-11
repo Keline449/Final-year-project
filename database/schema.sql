@@ -1,18 +1,3 @@
--- =============================================================================
--- Evaluation Management System (EMS) - Full Website Database
--- =============================================================================
--- Database name : ems_db
--- Engine        : MySQL / MariaDB (XAMPP)
--- Charset       : utf8mb4
---
--- HOW TO IMPORT (choose one):
---   1. phpMyAdmin: http://localhost/phpmyadmin → Import → select this file → Go
---   2. Command line (from project folder):
---        C:\xampp\mysql\bin\mysql.exe -u root < database\schema.sql
---
--- Connection settings (edit config/database.php if needed):
---   Host: localhost | User: root | Password: (empty) | Database: ems_db
--- =============================================================================
 
 CREATE DATABASE IF NOT EXISTS ems_db
     CHARACTER SET utf8mb4
@@ -20,7 +5,6 @@ CREATE DATABASE IF NOT EXISTS ems_db
 
 USE ems_db;
 
--- Drop existing tables (safe re-import; order respects foreign keys)
 SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS answers;
 DROP TABLE IF EXISTS exam_submissions;
@@ -30,9 +14,7 @@ DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS departments;
 SET FOREIGN_KEY_CHECKS = 1;
 
--- -----------------------------------------------------------------------------
--- departments: academic units
--- -----------------------------------------------------------------------------
+
 CREATE TABLE departments (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -40,9 +22,7 @@ CREATE TABLE departments (
     UNIQUE KEY uq_departments_name (name)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- -----------------------------------------------------------------------------
--- users: students and lecturers (registration & login)
--- -----------------------------------------------------------------------------
+
 CREATE TABLE users (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     full_name VARCHAR(150) NOT NULL,

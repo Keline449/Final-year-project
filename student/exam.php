@@ -105,7 +105,7 @@ $flash = getFlash();
             <h2><?= htmlspecialchars($evaluation['title']) ?></h2>
             <p>Lecturer: <?= htmlspecialchars($evaluation['lecturer_name']) ?></p>
             <?php if ($evaluation['form_file']): ?>
-                <p><a href="/evaluationmanagement/uploads/<?= htmlspecialchars($evaluation['form_file']) ?>" target="_blank" class="btn btn-outline btn-sm">Download Evaluation Form</a></p>
+                <p><a href="/uploads/<?= htmlspecialchars($evaluation['form_file']) ?>" target="_blank" class="btn btn-outline btn-sm">Download Evaluation Form</a></p>
             <?php endif; ?>
 
             <?php if (empty($questions)): ?>

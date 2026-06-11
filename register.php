@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 exit;
             }
         } catch (PDOException $e) {
-            $errors[] = 'Registration failed. Ensure the database is set up and migrated.';
+            $errors[] = 'Registration failed. Database error: ' . $e->getMessage();
         }
     }
 }

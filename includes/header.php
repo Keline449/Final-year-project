@@ -10,7 +10,7 @@ $bodyClass = $bodyClass ?? '';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($pageTitle) ?></title>
-    <link rel="stylesheet" href="/evaluationmanagement/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body class="<?= htmlspecialchars($bodyClass) ?>">
 <?php if ($showPublicNav): ?>
@@ -21,7 +21,7 @@ $bodyClass = $bodyClass ?? '';
         <a href="#" class="logo">EMS Cloud</a>
         <nav class="user-nav">
             <span class="user-badge"><?= htmlspecialchars($_SESSION['full_name'] ?? '') ?> (<?= htmlspecialchars(ucfirst($_SESSION['role'] ?? '')) ?>)</span>
-            <a href="/evaluationmanagement/logout.php" class="btn btn-outline btn-sm">Logout</a>
+            <a href="/logout.php" class="btn btn-outline btn-sm">Logout</a>
         </nav>
     </div>
 </header>
